@@ -21,8 +21,8 @@ t = h.Vector().record(h._ref_t)                     # Time stamp vector
 
 # run
 h.load_file('stdrun.hoc')
+#h.fcurrent()                                       # Make all assigned variables (currents, conductances, etc) consistent with the values of the states. Useful in combination with finitialize().
 h.finitialize(-64.97 * mV)
-#h.fcurrent()                                          # Make all assigned variables (currents, conductances, etc) consistent with the values of the states. Useful in combination with finitialize().
 h.continuerun(300 * ms)
 
 # plot
